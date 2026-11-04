@@ -1,6 +1,6 @@
 
 import models from "../Data/Models.json"
-import companies from "../Data/companies.json";
+import companies from "../Data/Companies.json";
 import "./index.css"
 
 function Filters({filters, setFilters, sorts, setSorts}) {
