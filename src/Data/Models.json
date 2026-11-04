@@ -1,0 +1,40 @@
+{
+    "Toyota": [
+        "Corolla",
+        "Camry",
+        "Avalon",
+        "Yaris",
+        "Supra",
+        "86",
+        "GR86",
+        "GR Corolla",
+        "Crown",
+        "Land Cruiser",
+        "Land Cruiser Prado",
+        "Fortuner",
+        "RAV4",
+        "Highlander",
+        "4Runner",
+        "Hilux"
+    ],
+    "Nissan": [
+        "Altima",
+        "Maxima",
+        "Sentra",
+        "Versa",
+        "Sunny",
+        "GT-R",
+        "Z",
+        "370Z",
+        "350Z",
+        "Patrol",
+        "Armada",
+        "Pathfinder",
+        "Murano",
+        "Rogue",
+        "X-Trail",
+        "Qashqai",
+        "Navara",
+        "Titan"
+    ]
+}
