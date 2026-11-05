@@ -15,7 +15,6 @@ function NavBar() {
             <div className="nav-category">
 
                 <p>Home Page</p>
-                <p>Services</p>
                 <p>Location</p>
                 <p>Contact Us</p>
             </div>

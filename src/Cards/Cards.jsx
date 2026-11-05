@@ -1,11 +1,10 @@
 
 import cards from "../Data/Cards.json";
 import "./index.css"
-import {CircleDollarSign} from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 function Cards({filters, sorts}) {
-    let filteredcards = cards;
+    let filteredcards = [...cards];
 
     const navigate = useNavigate();
     
@@ -17,19 +16,14 @@ function Cards({filters, sorts}) {
     if(filters.model){
         filteredcards = filteredcards.filter((e) => e.model === filters.model)
     }
-
-    if(!filters.company && !filters.model) {
-        filteredcards = cards
-    }
-
     if(sorts) {
         
         if(sorts == "Price"){
-            filteredcards.sort((a, b) => a.price - b.price)
+            filteredcards.sort((a, b) => b.price - a.price)
         }
 
         else if(sorts == "Year"){
-            filteredcards.sort((a, b) => a.year - b.year)
+            filteredcards.sort((a, b) => b.year - a.year)
         }
     }
     

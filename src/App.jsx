@@ -2,7 +2,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import FirstPage from './FirstPage/FirstPage';
 import SecondPage from "./Second-Page/Second-Page";
-import React, {useState} from 'react';
+import {useState} from 'react';
 
 function App() {
 

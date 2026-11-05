@@ -1,10 +1,15 @@
 
-import models from "../Data/Models.json"
-import companies from "../Data/Companies.json";
+import CustomSelect from "../CustomSelect/CustomSelectCompany";
+import CustomSelectModel from "../CustomSelect/CustomSelectModel";
+import CustomSelectSort from "../CustomSelect/CustomSelectSort";
+import { useState } from "react";
 import "./index.css"
 
 function Filters({filters, setFilters, sorts, setSorts}) {
 
+    const [show, setShow] = useState(false);
+    const [showModel, setShowModel] = useState(false);
+    const [showSort, setShowSort] = useState(false);
 
     function iYear() {
         setFilters(prev => ({...prev, 
@@ -20,54 +25,56 @@ function Filters({filters, setFilters, sorts, setSorts}) {
     return(<>
         <div>
             <div className="filters">
-                <div className="companies">
+                <div className="mm">
 
-                <p>Companies</p>
-                <select value={filters.company} onChange={(e) => {setFilters((prev) => ({
-                    ...prev,
-                    company: e.target.value,
-                    model: ""
-                }));
-                }}>
-                    <option value={""}>Select a Company</option>
-                    {companies.map((name, index) => (
-                        <option key={index} value={name}>
-                            {name}
-                        </option>
-                    ))}
-                </select>
-                </div>
-                <div className="model">
-                    <p>Model</p>
-                    <select value={filters.model} onChange={(e) => setFilters(prev => ({
-                        ...prev,
-                        model: e.target.value
-                    }))}>
-                        <option value="">Select a Model!</option>
-                        {(models[filters.company] || []).map((name, index) => (
-                            <option key={index} value={name}>
-                                {name}
-                            </option>
-                        ))}
-                    </select>
+                    <div className="companies">
+
+                        <p>Companies</p>
+                        <div className="cmpny-slct">
+                            <button onClick={() => {setShow(p => !p);
+                                setShowModel(false);
+                                setShowSort(false);
+                            }} className="com-btn">Filter Companies</button>
+                            <CustomSelect show={show} filters={filters} setFilters={setFilters}/>
+                        </div>
+
+                    </div>
+                    <div className="models">
+                        <p>Model</p>
+                        <div className="mdl-slct">
+                            <button onClick={() => {setShowModel(p => !p);
+                                setShowSort(false);
+                                setShow(false);
+                            }} className="mdl-btn">Filter Models</button>
+                            <CustomSelectModel filters={filters} show={showModel} setFilters={setFilters}/>
+                        </div>
+
+                    </div>
+
+                    <div className="year">
+                        <p>Year</p>
+                        <button onClick={iYear}>+</button>
+                        <input type="number" value={filters.year} readOnly ></input>
+                        <button onClick={dYear}>-</button>
+                    </div>
+
+                    <div className="sort">
+                        <p>Sort</p>
+                        <div className="sort-slct">
+                            <button onClick={() => {setShowSort(p => !p);
+                                setShowModel(false);
+                                setShow(false);
+                            }} className="sort-btn">Sort Results</button>
+                            <CustomSelectSort filters={filters} show={showSort} setFilters={setFilters} sorts={sorts} setSorts={setSorts}/>
+                        </div>
+                    </div>
 
                 </div>
-
-                <div className="year">
-                    <p>Year</p>
-                    <button onClick={iYear}>+</button>
-                    <input type="number" value={filters.year} readOnly ></input>
-                    <button onClick={dYear}>-</button>
-                </div>
-
-                <div className="sort">
-                    <p>Sort</p>
-                    <select value={sorts} onChange={(e) => setSorts(e.target.value)}>
-                        <option value="">How to Sort?</option>
-                        <option value={"Year"}>Year</option>
-                        <option value={"Price"}>Price</option>
-                    </select>
-                </div>
+                <button className="reset" onClick={() => {setFilters(p => ({...p, company: "", model: ""}));
+                                                        setSorts(false);
+                                                        setShow(false);
+                                                        setShowModel(false);
+                                                        setShowSort(false)}}>Reset</button>
             </div>
         </div>
     </>)
