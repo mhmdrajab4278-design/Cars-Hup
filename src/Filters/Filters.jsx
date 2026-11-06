@@ -29,43 +29,38 @@ function Filters({filters, setFilters, sorts, setSorts}) {
                 <div className="mm">
 
                     <div className="companies">
-
-                        <p>Companies</p>
                         <div className="cmpny-slct">
                             <button onClick={() => {setShow(p => !p);
                                 setShowModel(false);
                                 setShowSort(false);
-                            }} className="com-btn">Filter Companies</button>
+                            }} className="com-btn">Companies</button>
                             <CustomSelect show={show} filters={filters} setFilters={setFilters}/>
                         </div>
 
                     </div>
                     <div className="models">
-                        <p>Model</p>
                         <div className="mdl-slct">
                             <button onClick={() => {setShowModel(p => !p);
                                 setShowSort(false);
                                 setShow(false);
-                            }} className="mdl-btn">Filter Models</button>
+                            }} className="mdl-btn">Models</button>
                             <CustomSelectModel filters={filters} show={showModel} setFilters={setFilters}/>
                         </div>
 
                     </div>
 
                     <div className="year">
-                        <p>Year</p>
                         <button onClick={iYear}>+</button>
                         <input type="number" value={filters.year} readOnly ></input>
                         <button onClick={dYear}>-</button>
                     </div>
 
                     <div className="sort">
-                        <p>Sort</p>
                         <div className="sort-slct">
                             <button onClick={() => {setShowSort(p => !p);
                                 setShowModel(false);
                                 setShow(false);
-                            }} className="sort-btn">Sort Results</button>
+                            }} className="sort-btn">Results</button>
                             <CustomSelectSort filters={filters} show={showSort} setFilters={setFilters} sorts={sorts} setSorts={setSorts}/>
                         </div>
                     </div>

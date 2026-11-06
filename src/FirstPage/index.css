@@ -1,0 +1,39 @@
+
+
+:root {
+    --bg-primary: #101820;
+    --bg-secondary: #18232F;
+
+    --accent: #D4A853;
+
+    --text-primary: #F5F5F5;
+    --text-secondary: #A0AAB5;
+
+    --border: #2C3947;
+
+    --card-bg: #1C2936;
+    --hover-bg: #263747;
+
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+body{
+    background-color: var(--bg-secondary);
+    text-align: center;
+}
+
+.show-btn{
+    margin-top: 6px;
+    border: 2px solid var(--border);
+    border-radius: 5px;
+    background-color: var(--card-bg);
+    color: var(--text-primary);
+    font-size: 1.2em;
+    padding: 3px 60px;
+    transition: .4s;
+}
+
+.show-btn:hover{
+    background-color: var(--hover-bg);
+    border: 2px solid var(--text-primary);
+}

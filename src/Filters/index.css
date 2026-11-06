@@ -20,7 +20,6 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    row-gap: 20px;
     background-color: var(--bg-secondary);
     color: var(--text-primary);
     padding: 0 20px;
@@ -61,6 +60,7 @@ input::-webkit-inner-spin-button {
 }
 
 .mm{
+  padding: 20px 0px;
   display: flex;
   column-gap: 30px;
 
@@ -102,12 +102,14 @@ input::-webkit-inner-spin-button {
 }
 
 .com-btn{
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
-  font-size: .95em;
-  border-bottom: none;
-  border-radius: 5px;
-  padding: 2px 6px;
+    margin-top: 6px;
+    border: 2px solid var(--border);
+    border-radius: 5px;
+    background-color: var(--card-bg);
+    color: var(--text-primary);
+    font-size: 1em;
+    transition: .4s;
+    padding: 3px 10px;
 }
 
 .cstm-slct{
@@ -168,31 +170,37 @@ input::-webkit-inner-spin-button {
 }
 
 .mdl-btn{
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
-  font-size: .95em;
-  border-bottom: none;
-  border-radius: 5px;
-  padding: 2px 6px;
+    margin-top: 6px;
+    border: 2px solid var(--border);
+    border-radius: 5px;
+    background-color: var(--card-bg);
+    color: var(--text-primary);
+    font-size: 1.2em;
+    transition: .4s;
+    padding: 3px 60px;
 }
 
 .reset{
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
-  font-size: .95em;
-  border-bottom: none;
-  border-radius: 5px;
-  padding: 2px 6px;
+    margin-top: 6px;
+    border: 2px solid var(--border);
+    border-radius: 5px;
+    background-color: var(--card-bg);
+    color: var(--text-primary);
+    font-size: 1em;
+    padding: 3px 40px;
+    transition: .4s;
 
 }
 
 .sort-btn{
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
-  font-size: .95em;
-  border-bottom: none;
-  border-radius: 5px;
-  padding: 2px 6px;
+    margin-top: 6px;
+    border: 2px solid var(--border);
+    border-radius: 5px;
+    background-color: var(--card-bg);
+    color: var(--text-primary);
+    font-size: 1em;
+    padding: 3px 20px;
+    transition: .4s;
 }
 
 .cstm-sort-slct{
@@ -217,4 +225,9 @@ input::-webkit-inner-spin-button {
 
 .cstm-sort-slct.open{
   height: 40px;
+}
+
+button:hover{
+    background-color: var(--hover-bg);
+    border: 2px solid var(--text-primary);
 }
