@@ -22,6 +22,7 @@ function Filters({filters, setFilters, sorts, setSorts}) {
             year: prev.year <= 2000 ? prev.year : prev.year - 1
         }))}
 
+
     return(<>
         <div>
             <div className="filters">

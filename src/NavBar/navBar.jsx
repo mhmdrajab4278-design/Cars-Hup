@@ -5,12 +5,10 @@ import cards from "../Data/Cards.json";
 import model from "../Data/Models.json"
 import { useState } from "react";
 
-function NavBar() {
+function NavBar({setFilters}) {
 
     const card = [...cards];
-    let models = [...model.Toyota] + [...model.Nissan];
-    console.log(models);
-    const now = models.split(",");
+    let now = [...model.Toyota, ...model.Nissan];
     console.log(now)
     const [search, setSearch] = useState("");
     const [show, setShow] = useState("");
@@ -31,7 +29,7 @@ function NavBar() {
 
                 <div className="searchbox">
                     <input className="search" onFocus={() => setShow(true)} onBlur={() => setShow(false)} onChange={(e) => {setSearch(() => (e.target.value.toLowerCase().trim()));}}></input>
-                    <SearchBox card={card} results={results} show={show}/>
+                    <SearchBox card={card} results={results} show={show} setFilters={setFilters}/>
                 </div>
                 <Search/>
             </div>

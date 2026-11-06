@@ -1,11 +1,11 @@
 
 
-function SearchBox({results, show}) {
+function SearchBox({results, show, setFilters}) {
 
     return(<>
         <div className={`searchcustom ${show ? "open" : ""}`}>
             {results ? results.map((result, index) =>
-                <div key={index}>{result}</div>) || [] : []}
+                <div key={index} onMouseDown={() => setFilters(c => ({...c, model: result}))}>{index + 1}-{result}</div>) || [] : []}
 
         </div>
     </>)

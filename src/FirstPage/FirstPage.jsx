@@ -5,7 +5,7 @@ import Cards from "../Cards/Cards";
 function FirstPage({filters, setFilters, sorts, setSorts}) {
 
     return(<>
-        <NavBar/>
+        <NavBar setFilters={setFilters}/>
         
         <Filters filters={filters} setFilters={setFilters} sorts={sorts} setSorts={setSorts}/>
         <Cards filters={filters} sorts={sorts}/>
