@@ -1,0 +1,45 @@
+
+.favorites-page {
+    padding: 30px;
+    color: var(--text-primary);
+}
+
+.favorites-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.favorites-header svg {
+    color: var(--accent);
+}
+
+.favorites-header h1 {
+    margin: 0;
+    font-size: 27px;
+}
+
+.favorites-header p {
+    color: var(--text-secondary);
+    margin: 5px 0 0;
+}
+
+.empty-favorites {
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary);
+    text-align: center;
+}
+
+.empty-favorites svg {
+    color: var(--accent);
+    margin-bottom: 15px;
+}
+
+.empty-favorites h2 {
+    color: var(--text-primary);
+}

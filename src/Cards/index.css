@@ -1,59 +1,195 @@
-:root {
-    --bg-primary: #101820;
-    --bg-secondary: #18232F;
 
-    --accent: #D4A853;
-
-    --text-primary: #F5F5F5;
-    --text-secondary: #A0AAB5;
-
-    --border: #2C3947;
-
-    --card-bg: #1C2936;
-    --hover-bg: #263747;
-
-    --shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+.cards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 25px;
 }
 
-*{
-    box-sizing: border-box;
-}
+/* Main card */
 
-.cards{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    background-color: var(--bg-secondary);
-}
-
-.card{
-    flex: 1 1 300px;
-    border: 4px solid var(--accent);
-    margin: 10px;
-    border-radius: 15px;
-    background-color: white;
-    padding: 0 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 250px;
-    transition: .3s;
+.car-card {
+    min-width: 0;
+    overflow: hidden;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
     cursor: pointer;
+    text-align: left;
+    color: var(--text-primary);
+    font: inherit;
+    padding: 0;
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
-
-.card *{
-    margin: 4px;
+.car-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--accent);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
 }
 
-.card:hover{
-    border: 4px solid var(--hover-bg);
-    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.5);
+/* Image section */
+
+.car-image {
+    height: 210px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: var(--bg-secondary);
+    padding: 15px;
 }
 
-.card img{
-    border-radius: 25px;
-    max-width: 250px;
-    max-height: 150px;
+.car-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.4s ease;
+}
+
+.car-card:hover .car-image img {
+    transform: scale(1.07);
+}
+
+/* Badges */
+
+.car-company {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 1;
+    background: rgba(16, 24, 32, 0.85);
+    color: var(--accent);
+    border: 1px solid rgba(212, 168, 83, 0.3);
+    border-radius: 6px;
+    padding: 6px 11px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.car-year {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    background: var(--hover-bg);
+    color: var(--text-secondary);
+    border-radius: 6px;
+    padding: 6px 10px;
+    font-size: 12px;
+}
+
+/* Information */
+
+.car-info {
+    padding: 20px;
+}
+
+.car-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.car-heading h2 {
+    font-size: 23px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.car-heading p {
+    margin: 6px 0 0;
+    color: var(--text-secondary);
+    font-size: 13px;
+}
+
+.car-arrow {
+    color: var(--text-secondary);
+    transition: 0.3s ease;
+}
+
+.car-card:hover .car-arrow {
+    color: var(--accent);
+    transform: translate(3px, -3px);
+}
+
+/* Divider */
+
+.car-divider {
+    height: 1px;
+    background: var(--border);
+    margin: 18px 0;
+}
+
+/* Specifications */
+
+.car-specs {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.car-specs span {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--text-secondary);
+    font-size: 13px;
+}
+
+.car-specs svg {
+    color: var(--accent);
+}
+
+/* Price section */
+
+.car-bottom {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    margin-top: 22px;
+}
+
+.price-label {
+    color: var(--text-secondary);
+    font-size: 11px;
+    margin: 0 0 5px;
+}
+
+.car-bottom h3 {
+    color: var(--accent);
+    font-size: 24px;
+    margin: 0;
+    font-weight: 700;
+}
+
+.view-details {
+    color: var(--text-primary);
+    font-size: 12px;
+    border-bottom: 1px solid var(--accent);
+    padding-bottom: 4px;
+    transition: color 0.3s ease;
+}
+
+.car-card:hover .view-details {
+    color: var(--accent);
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+    .cards {
+        grid-template-columns: 1fr;
+        padding: 15px;
+        gap: 18px;
+    }
+
+    .car-image {
+        height: 200px;
+    }
 }
