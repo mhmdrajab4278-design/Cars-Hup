@@ -2,11 +2,14 @@
 import cards from "../Data/Cards.json";
 import "./index.css"
 import { useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import {Heart} from "lucide-react"
 
 function Cards({filters, sorts}) {
     let filteredcards = [...cards];
 
     const navigate = useNavigate();
+    const location = useLocation()
     
     if(filters.company){
         

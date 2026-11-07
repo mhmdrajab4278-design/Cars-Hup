@@ -110,6 +110,7 @@ input::-webkit-inner-spin-button {
     font-size: 1em;
     transition: .4s;
     padding: 3px 10px;
+    letter-spacing: 1.5px;
 }
 
 .cstm-slct{
@@ -177,7 +178,8 @@ input::-webkit-inner-spin-button {
     color: var(--text-primary);
     font-size: 1.2em;
     transition: .4s;
-    padding: 3px 60px;
+    padding: 3px 30px;
+    letter-spacing: 1.2px;
 }
 
 .reset{
@@ -200,6 +202,7 @@ input::-webkit-inner-spin-button {
     color: var(--text-primary);
     font-size: 1em;
     padding: 3px 20px;
+    letter-spacing: 1.5px;
     transition: .4s;
 }
 
