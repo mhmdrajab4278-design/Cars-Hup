@@ -60,9 +60,9 @@ input::-webkit-inner-spin-button {
 }
 
 .mm{
-  padding: 20px 0px;
+  padding: 15px 0px;
   display: flex;
-  column-gap: 30px;
+  column-gap: 10px;
 
 }
 
@@ -107,10 +107,10 @@ input::-webkit-inner-spin-button {
     border-radius: 5px;
     background-color: var(--card-bg);
     color: var(--text-primary);
-    font-size: 1em;
+    font-size: 0.8em;
     transition: .4s;
     padding: 3px 10px;
-    letter-spacing: 1.5px;
+    letter-spacing: 1.3px;
 }
 
 .cstm-slct{
@@ -176,10 +176,10 @@ input::-webkit-inner-spin-button {
     border-radius: 5px;
     background-color: var(--card-bg);
     color: var(--text-primary);
-    font-size: 1.2em;
+    font-size: 0.8em;
     transition: .4s;
-    padding: 3px 30px;
-    letter-spacing: 1.2px;
+    padding: 3px 10px;
+    letter-spacing: 1.5px;
 }
 
 .reset{
@@ -200,7 +200,7 @@ input::-webkit-inner-spin-button {
     border-radius: 5px;
     background-color: var(--card-bg);
     color: var(--text-primary);
-    font-size: 1em;
+    font-size: .8em;
     padding: 3px 20px;
     letter-spacing: 1.5px;
     transition: .4s;

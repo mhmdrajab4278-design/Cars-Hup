@@ -31,7 +31,7 @@ function NavBar({setFilters}) {
                     <input className="search" onFocus={() => setShow(true)} onBlur={() => setShow(false)} onChange={(e) => {setSearch(() => (e.target.value.toLowerCase().trim()));}}></input>
                     <SearchBox card={card} results={results} show={show} setFilters={setFilters}/>
                 </div>
-                <Search/>
+                <Search className="srch-icon"/>
             </div>
 
             <div className="nav-category">

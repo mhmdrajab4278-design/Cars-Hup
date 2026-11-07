@@ -60,7 +60,7 @@ function Filters({filters, setFilters, sorts, setSorts}) {
                             <button onClick={() => {setShowSort(p => !p);
                                 setShowModel(false);
                                 setShow(false);
-                            }} className="sort-btn">Results</button>
+                            }} className="sort-btn">Sort</button>
                             <CustomSelectSort filters={filters} show={showSort} setFilters={setFilters} sorts={sorts} setSorts={setSorts}/>
                         </div>
                     </div>

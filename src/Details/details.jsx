@@ -14,7 +14,7 @@ function Details() {
     const car = location.state;
 
     useEffect(() => {
-    localStorage.setItem("favorites", JSON.stringify(favorite));
+        localStorage.setItem("favorites", JSON.stringify(favorite));
     }, [favorite]);
 
     return(<>
