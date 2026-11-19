@@ -68,9 +68,10 @@
 }
 
 .srch-icon{
-    position: fixed;
+    position: absolute;
     color: var(--bg-primary);
     transform: translateX(55px);
+    top: 13px;
     height: 18px;
 }
 

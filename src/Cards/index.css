@@ -7,8 +7,6 @@
     padding: 25px;
 }
 
-/* Main card */
-
 .car-card {
     min-width: 0;
     overflow: hidden;
@@ -32,8 +30,6 @@
     box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
 }
 
-/* Image section */
-
 .car-image {
     height: 210px;
     position: relative;
@@ -55,8 +51,6 @@
 .car-card:hover .car-image img {
     transform: scale(1.07);
 }
-
-/* Badges */
 
 .car-company {
     position: absolute;
@@ -83,8 +77,6 @@
     padding: 6px 10px;
     font-size: 12px;
 }
-
-/* Information */
 
 .car-info {
     padding: 20px;
@@ -118,15 +110,11 @@
     transform: translate(3px, -3px);
 }
 
-/* Divider */
-
 .car-divider {
     height: 1px;
     background: var(--border);
     margin: 18px 0;
 }
-
-/* Specifications */
 
 .car-specs {
     display: flex;
@@ -145,8 +133,6 @@
 .car-specs svg {
     color: var(--accent);
 }
-
-/* Price section */
 
 .car-bottom {
     display: flex;
@@ -179,8 +165,6 @@
 .car-card:hover .view-details {
     color: var(--accent);
 }
-
-/* Responsive */
 
 @media (max-width: 600px) {
     .cards {
