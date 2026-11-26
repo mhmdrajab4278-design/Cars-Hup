@@ -6,16 +6,12 @@ import cards from "../Data/Cards.json";
 import model from "../Data/Models.json"
 import "./index.css"
 
-function FirstPage({filters, setFilters, sorts}) {
+function FirstPage({filters, setFilters, sorts, showcurt, hclicked, sclicked, setShowCurt, setHClicked, setSClicked}) {
     const card = [...cards];
     let now = [...model.Toyota, ...model.Nissan];
     console.log(now)
     const [search, setSearch] = useState("");
     const [show, setShow] = useState("");
-    const [showcurt, setShowCurt] = useState(false);
-    const [hclicked, setHClicked] = useState(false);
-    const [homeclicked, setHomeClicked] = useState(false);
-    const [sclicked, setSClicked] = useState(false);
 
     let results = now.filter((name) => name.toLowerCase().includes([search.trim().toLowerCase()]));
 

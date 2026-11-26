@@ -12,6 +12,11 @@ function App() {
         year: 2020
     })
 
+    
+    const [showcurt, setShowCurt] = useState(false);
+    const [hclicked, setHClicked] = useState(false);
+    const [sclicked, setSClicked] = useState(false);
+
     const [sorts, setSorts] = useState("")
 
     console.log(filters)
@@ -20,8 +25,8 @@ function App() {
     return(<>
     <BrowserRouter>
         <Routes>
-            <Route path="/" element={<FirstPage filters={filters} setFilters={setFilters} sorts={sorts} setSorts={setSorts}/>}></Route>
-            <Route path="/second" element={<SecondPage filters={filters}></SecondPage>}></Route>
+            <Route path="/" element={<FirstPage filters={filters} setFilters={setFilters} sorts={sorts} setSorts={setSorts}  showcurt={showcurt} hclicked={hclicked} sclicked={sclicked} setShowCurt={setShowCurt} setHClicked={setHClicked} setSClicked={setSClicked}/>}></Route>
+            <Route path="/second" element={<SecondPage filters={filters} showcurt={showcurt} hclicked={hclicked} sclicked={sclicked} setShowCurt={setShowCurt} setHClicked={setHClicked} setSClicked={setSClicked}></SecondPage>}></Route>
             
         </Routes>
     

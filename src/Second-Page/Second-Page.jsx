@@ -1,10 +1,11 @@
 
 import NavBar from "../NavBar/navBar";
+import Curtains from "../Curtains/Curtains";
 import { useLocation } from "react-router-dom";
 import "./index.css";
 import Details from "../Details/details";
 
-function SecondPage({filters}) {
+function SecondPage({filters, showcurt, hclicked, sclicked, setShowCurt, setHClicked, setSClicked}) {
 
     const location = useLocation()
 
@@ -15,9 +16,10 @@ function SecondPage({filters}) {
     console.log(filters)
 
     return(<>
-        <NavBar/>
+        <NavBar showcurt={showcurt} setShowCurt={setShowCurt} setHClicked={setHClicked} setSClicked={setSClicked}/>
         <img src={state.image}></img>
         <Details/>
+        <Curtains showcurt={showcurt} hclicked={hclicked} sclicked={sclicked}/>
     </>)
 }
 
