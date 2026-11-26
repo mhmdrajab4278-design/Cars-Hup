@@ -2,13 +2,15 @@ import "./index.css";
 import cards from "../Data/Cards.json";
 import model from "../Data/Models.json"
 import { useState } from "react";
-import {CarFront, Heart, Search} from "lucide-react"
+import {CarFront, Heart, Search, HomeIcon, Home} from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 function NavBar({setFilters, setShowCurt, showcurt, setSClicked, setHClicked}) {
 
     const card = [...cards];
     let now = [...model.Toyota, ...model.Nissan];
     console.log(now)
+    const navigate = useNavigate()
     const [search, setSearch] = useState("");
     const [show, setShow] = useState("");
     console.log(search)
@@ -23,8 +25,8 @@ function NavBar({setFilters, setShowCurt, showcurt, setSClicked, setHClicked}) {
                 <h3 className="hup">Hup</h3>
             </div>
             <div className="nav-btns">
+                <Home onClick={() => navigate("/")}/>
                 <Heart onClick={() => {setShowCurt(p => !p)
-                    console.log(showcurt)
                     setHClicked(p => !p)
                 }}/>
                 <Search onClick={() => {setShowCurt(p => !p)

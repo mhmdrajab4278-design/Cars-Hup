@@ -14,6 +14,7 @@ function FirstPage({filters, setFilters, sorts}) {
     const [show, setShow] = useState("");
     const [showcurt, setShowCurt] = useState(false);
     const [hclicked, setHClicked] = useState(false);
+    const [homeclicked, setHomeClicked] = useState(false);
     const [sclicked, setSClicked] = useState(false);
 
     let results = now.filter((name) => name.toLowerCase().includes([search.trim().toLowerCase()]));

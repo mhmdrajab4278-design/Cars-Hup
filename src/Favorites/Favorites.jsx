@@ -30,11 +30,11 @@ function Favorites() {
 
             {favoriteCards.length > 0 ? (
 
-                <div className="cards">
+                <div className="fav-cards">
                     {favoriteCards.map((car) => (
                         <article
                             key={car.id}
-                            className="car-card"
+                            className="fav-car-card"
                             onClick={() => navigate("/second", { state: car })}
                         >
                             <div className="car-image">

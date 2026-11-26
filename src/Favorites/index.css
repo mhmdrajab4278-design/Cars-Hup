@@ -1,6 +1,45 @@
 
+
+.fav-cards{
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding: 10px;
+    box-sizing: border-box;
+    padding-left: 10px;
+}
+
+.fav-car-card{
+    scroll-snap-align: start;
+    flex: 0 0 250px;
+    min-width: 250px;
+    overflow: hidden;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    cursor: pointer;
+    text-align: left;
+    color: var(--text-primary);
+    font: inherit;
+    padding: 0;
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+.fav-car-card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+}
+
 .favorites-page {
     padding: 30px;
+    min-width: 0 ;
     color: var(--text-primary);
 }
 
