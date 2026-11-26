@@ -32,13 +32,37 @@
 
 .srch-input{
     border: 1px solid var(--accent);
-    outline: 3px solid var(--accent);
+    outline: 2px solid var(--accent);
     border-radius: 5px;
     width: 70%;
     height: 25px;
+    padding-left: 10px;
     transition: .09s;
+    margin-bottom: 30px;
 }
 
 .srch-input:focus{
     outline-offset: 2px;
+}
+
+.results{
+    display: flex;
+    flex-direction: column;
+    scroll-snap-type: x mandatory;
+    overflow-x: auto;
+    background-color: var(--bg-secondary);
+    width: 75%;
+    row-gap: 5px;
+}
+
+.r-cards{
+    display: flex;
+    padding-left: 10px;
+    padding: 5px;
+    border: 1px solid var(--accent);
+    border-radius: 5px;
+    background-color: #D4A853;
+}
+
+.r-cards:first-child{
 }
