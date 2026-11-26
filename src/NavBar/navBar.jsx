@@ -1,11 +1,10 @@
 import "./index.css";
-import {Search} from "lucide-react";
-import SearchBox from "../SearchBox/SearchBox";
 import cards from "../Data/Cards.json";
 import model from "../Data/Models.json"
 import { useState } from "react";
+import {CarFront, Heart, Search} from "lucide-react"
 
-function NavBar({setFilters}) {
+function NavBar({setFilters, setShowCurt, showcurt, setSClicked, setHClicked}) {
 
     const card = [...cards];
     let now = [...model.Toyota, ...model.Nissan];
@@ -14,32 +13,25 @@ function NavBar({setFilters}) {
     const [show, setShow] = useState("");
     console.log(search)
 
-    let results = now.filter((name) => name.toLowerCase().includes([search.trim().toLowerCase()]));
-
-    if(!search){
-        results = false
-    }
-
-    console.log(results)
-
     return(<>
     
         <div className="nav">
-            <div className="search-cnt">
-
-                <div className="searchbox">
-                    <input className="search" onFocus={() => setShow(true)} onBlur={() => setShow(false)} onChange={(e) => {setSearch(() => (e.target.value.toLowerCase().trim()));}}></input>
-                    <SearchBox card={card} results={results} show={show} setFilters={setFilters}/>
-                </div>
-                <Search className="srch-icon"/>
+            <div className="logo-cnt">
+                
+                <CarFront className="carlogo" size={"40px"}/>
+                <h3 className="cars">Cars</h3>
+                <h3 className="hup">Hup</h3>
+            </div>
+            <div className="nav-btns">
+                <Heart onClick={() => {setShowCurt(p => !p)
+                    console.log(showcurt)
+                    setHClicked(p => !p)
+                }}/>
+                <Search onClick={() => {setShowCurt(p => !p)
+                    setSClicked(p => !p)
+                }}/>
             </div>
 
-            <div className="nav-category">
-
-                <p>Home</p>
-                <p>Location</p>
-                <p>Contact</p>
-            </div>
         </div>
     </>)
 }

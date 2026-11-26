@@ -26,20 +26,36 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    column-gap: 20px;
+    padding: 0 10px;
     margin: 0;
     border-bottom: 4px solid var(--accent);
+    height: 80px;
 }
 
-.nav-category{
-    background-color: transparent;
-    color: var(--text-primary);
+.carlogo{
+    color: var(--accent);
+    margin-right: 5px;
+}
+
+.logo-cnt{
     display: flex;
-    justify-content: flex-end;
-    column-gap: 10px;
-    padding-right: 10px;
-    margin: 0;
-    font-size: 0.9em;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    font-size: 1.5em;
+}
+
+.cars{
+    color: var(--text-primary);
+}
+
+.hup{
+    color: var(--accent);
+}
+
+.nav-btns{
+    display: flex;
+    column-gap: 5px;
 }
 
 .search-cnt{

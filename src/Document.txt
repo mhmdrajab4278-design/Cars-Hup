@@ -1,0 +1,8 @@
+
+        
+        <div className="search-cnt">
+            <div className="searchbox">
+                <input className="search" onFocus={() => setShow(true)} onBlur={() => setShow(false)} onChange={(e) => {setSearch(() => (e.target.value.toLowerCase().trim()));}}></input>
+                <SearchBox card={card} results={results} show={show} setFilters={setFilters}/>
+            </div>
+        </div>
