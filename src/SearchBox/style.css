@@ -1,68 +1,101 @@
 
-:root {
-    --bg-primary: #101820;
-    --bg-secondary: #18232F;
-
-    --accent: #D4A853;
-
-    --text-primary: #F5F5F5;
-    --text-secondary: #A0AAB5;
-
-    --border: #2C3947;
-
-    --card-bg: #1C2936;
-    --hover-bg: #263747;
-
-    --shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
-
-*{
-    box-sizing: border-box;
-}
-
-.srch-cnt{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    height: 100%;
-    padding-top: 20px;
+.srch-cnt {
     width: 100%;
+    max-width: 750px;
+    margin: auto;
+    padding: 25px;
 }
 
-.srch-input{
-    border: 1px solid var(--accent);
-    outline: 2px solid var(--accent);
-    border-radius: 5px;
-    width: 70%;
-    height: 25px;
-    padding-left: 10px;
-    transition: .09s;
-    margin-bottom: 30px;
+.srch-input {
+    width: 100%;
+    padding: 16px 20px;
+    border: 1px solid #2C3947;
+    border-radius: 12px;
+    background: #18232F;
+    color: #F5F5F5;
+    outline: none;
+    font-size: 16px;
+    transition: .3s;
 }
 
-.srch-input:focus{
-    outline-offset: 2px;
+.srch-input:focus {
+    border-color: #D4A853;
+    box-shadow: 0 0 0 3px #D4A85320;
 }
 
-.results{
+.results {
     display: flex;
     flex-direction: column;
-    scroll-snap-type: x mandatory;
-    overflow-x: auto;
-    background-color: var(--bg-secondary);
-    width: 75%;
-    row-gap: 5px;
+    gap: 12px;
+    margin-top: 20px;
+    max-height: 450px;
+    overflow-y: auto;
+    padding-right: 5px;
 }
 
-.r-cards{
+.r-cards {
     display: flex;
-    padding-left: 10px;
-    padding: 5px;
-    border: 1px solid var(--accent);
-    border-radius: 5px;
-    background-color: #D4A853;
+    align-items: center;
+    gap: 18px;
+    padding: 12px;
+    background: #18232F;
+    border: 1px solid #2C3947;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: .25s ease;
 }
 
-.r-cards:first-child{
+.r-cards:hover {
+    background: #263747;
+    border-color: #D4A853;
+    transform: translateX(5px);
+}
+
+.r-cards img {
+    width: 115px;
+    height: 75px;
+    object-fit: contain;
+    border-radius: 8px;
+    background: #101820;
+}
+
+.r-info {
+    flex: 1;
+}
+
+.r-info span {
+    color: #D4A853;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.r-info h3 {
+    color: #F5F5F5;
+    margin: 5px 0;
+    font-size: 17px;
+}
+
+.r-info p {
+    color: #9BA8B5;
+    font-size: 13px;
+    margin: 0;
+}
+
+.r-price {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #D4A853;
+}
+
+.r-price h3 {
+    font-size: 15px;
+    white-space: nowrap;
+}
+
+.no-results {
+    text-align: center;
+    color: #9BA8B5;
+    padding: 30px;
 }
