@@ -5,7 +5,7 @@ import { useState } from "react";
 import {CarFront, Heart, Search, HomeIcon, Home} from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
-function NavBar({setFilters, setShowCurt, showcurt, setSClicked, setHClicked}) {
+function NavBar({setFilters, sclicked, hclicked, setShowCurt, showcurt, setSClicked, setHClicked}) {
 
     const card = [...cards];
     let now = [...model.Toyota, ...model.Nissan];
@@ -26,13 +26,31 @@ function NavBar({setFilters, setShowCurt, showcurt, setSClicked, setHClicked}) {
             </div>
             <div className="nav-btns">
                 <Home onClick={() => navigate("/")}/>
-                <Heart onClick={() => {setShowCurt(p => !p)
-                    setSClicked(false)
-                    setHClicked(p => !p)
+                <Heart onClick={() => {
+                    
+                    if(showcurt && hclicked)
+                    {
+
+                        setShowCurt(false)
+                        setHClicked(false)
+                    } else{
+                        setShowCurt(true)
+                        setHClicked(true)
+                        setSClicked(false)
+                    }
                 }}/>
-                <Search onClick={() => {setShowCurt(p => !p)
-                    setSClicked(p => !p)
-                    setHClicked(false)
+                <Search onClick={() => {
+                    
+                    if(showcurt && sclicked)
+                    {
+
+                        setShowCurt(false)
+                        setSClicked(false)
+                    } else{
+                        setShowCurt(true)
+                        setSClicked(true)
+                        setHClicked(false)
+                    }
                 }}/>
             </div>
 

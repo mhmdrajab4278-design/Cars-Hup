@@ -20,7 +20,7 @@ function FirstPage({filters, setFilters, sorts, showcurt, hclicked, sclicked, se
     }
 
     return(<>
-        <NavBar setFilters={setFilters} showcurt={showcurt} setShowCurt={setShowCurt} setHClicked={setHClicked} setSClicked={setSClicked}/>
+        <NavBar setFilters={setFilters} hclicked={hclicked} sclicked={sclicked} showcurt={showcurt} setShowCurt={setShowCurt} setHClicked={setHClicked} setSClicked={setSClicked}/>
         <Cards filters={filters} sorts={sorts}/>
         <Curtains showcurt={showcurt} setShowCurt={setShowCurt} hclicked={hclicked} sclicked={sclicked} setSClicked={setSClicked}/>
     </>)
