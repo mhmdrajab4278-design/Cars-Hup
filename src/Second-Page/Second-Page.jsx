@@ -16,10 +16,16 @@ function SecondPage({filters, showcurt, hclicked, sclicked, setShowCurt, setHCli
     console.log(filters)
 
     return(<>
-        <NavBar showcurt={showcurt} setShowCurt={setShowCurt} setHClicked={setHClicked} setSClicked={setSClicked}/>
+        <NavBar
+            showcurt={showcurt} hclicked={hclicked} sclicked={sclicked}
+            setShowCurt={setShowCurt} setHClicked={setHClicked} setSClicked={setSClicked}
+        />
         <img src={state.image}></img>
         <Details/>
-        <Curtains showcurt={showcurt} hclicked={hclicked} sclicked={sclicked}/>
+        <Curtains
+            showcurt={showcurt} hclicked={hclicked} sclicked={sclicked}
+            setShowCurt={setShowCurt} setHClicked={setHClicked} setSClicked={setSClicked}
+        />
     </>)
 }
 
