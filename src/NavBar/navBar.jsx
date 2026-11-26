@@ -27,10 +27,12 @@ function NavBar({setFilters, setShowCurt, showcurt, setSClicked, setHClicked}) {
             <div className="nav-btns">
                 <Home onClick={() => navigate("/")}/>
                 <Heart onClick={() => {setShowCurt(p => !p)
+                    setSClicked(false)
                     setHClicked(p => !p)
                 }}/>
                 <Search onClick={() => {setShowCurt(p => !p)
                     setSClicked(p => !p)
+                    setHClicked(false)
                 }}/>
             </div>
 
